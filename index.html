@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id = "desktop-nav">
+        <div class="logo">Veda Guduri</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#design">Design</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Veda Guduri</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#design" onclick="toggleMenu()">Design</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section_pic-container">
+            <img src="./assets/profile_pic.jpg" alt="Veda Guduri profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">
+                Hello, I'm
+            </p>
+            <h1 class="title">Veda Guduri</h1>
+            <p class="section__text__p2"><span id="typed-text"></span></p>
+            <div class="btn-container">
+                <button 
+                    class="btn btn-color-2" 
+                    onclick="window.open('./assets/resume.pdf')">
+                    Download CV
+                </button>
+                <button 
+                    class="btn btn-color-1" 
+                    onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My linkedin profile" class="icon" onclick="window.open('https://www.linkedin.com/in/veda-guduri/', '_blank')">
+                <img src="./assets/github.png" alt="My github" class="icon" onclick="window.open('https://github.com/miniSchemer?tab=repositories', '_blank')">
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            
+            <div class="about-details-containers">
+                <br>
+                <div class="text-container">
+                    <h4>I'm a Computer Science student who believes technology should work for everyone. I love crafting user-friendly web experiences through frontend development, UI/UX design, and web design. My passion lies in creating interfaces that make people feel comfortable and confident, whether they're navigating an app for the first time or the hundredth.</h4>
+                </div>
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="experience icon" class="icon">
+                        <h3>Relevant Coursework</h3><br>
+                        <p>Mobile Applications, Computer Graphics, User Interface, Human-Computer Interaction, Virtual Reality</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="education icon" class="icon">
+                        <h3>Education</h3><br>
+                        <p>Candidate for Bachelors of Science in Computer Science, <br>Certificate in Game Design and Data Science</p>
+                    </div>
+                    <div class="details-container skills-container">
+                        <h3>Programming Languages</h3><br>
+                        <div class="skills-list">
+                            <span class="skill-item">Java</span>                            
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">C#</span>
+                            <span class="skill-item">JavaScript</span>  
+                            <span class="skill-item">R</span>
+                            <span class="skill-item">C</span>
+                            <span class="skill-item">Kotlin</span>
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">HTML/CSS</span>
+                            <span class="skill-item">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="details-container skills-container">
+                        <h3>Developer Tools</h3><br>
+                        <div class="skills-list">
+                            <span class="skill-item">Android Studio</span>
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">Angular</span>
+                            <span class="skill-item">Figma</span>
+                            <span class="skill-item">GitHub</span>
+                            <span class="skill-item">GCP</span>
+                            <span class="skill-item">Jira</span>
+                            <span class="skill-item">Azure</span>
+                            <span class="skill-item">React</span>
+                            <span class="skill-item">VS Code</span>                              
+                            <span class="skill-item">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            
+            <!-- Zurich Insurance -->
+            <div class="experience-card">
+                <h2 class="company-name">Zurich Insurance</h2>
+                <span class="date-duration">May 2025 – Aug 2025</span>
+                <h3 class="job-title">IT Cloud Operations Intern</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">Cloud Migration</span>
+                    <span class="skill-tag">Security Compliance</span>
+                </div>
+            </div>
+
+            <!-- Wintrust Financial -->
+            <div class="experience-card">
+                <h2 class="company-name">Wintrust Financial</h2>
+                <span class="date-duration">May 2024 – Aug 2024</span>
+                <h3 class="job-title">IT App Developer Intern</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">.NET Core</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+
+            <!-- Practically -->
+            <div class="experience-card">
+                <h2 class="company-name">Practically</h2>
+                <span class="date-duration">Jun 2021 – Aug 2022</span>
+                <h3 class="job-title">Data Scientist Intern</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Web Scraping</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="projects-intro">
+            <p>Here are some of my projects! I enjoy exploring the intersection of design and tech, blending technical skills with creative problem-solving.</p>        </div>
+        <div class="projects-container">
+            
+            <!-- Project 1 -->
+            <div class="project-item">
+                <img src="./assets/app_logo.png" alt="Fitfolio Logo" class="project-logo">
+                <h2 class="project-title">Fitfolio</h2>
+                <p class="project-short-description">A digital closet app for organizing and planning outfits.</p>
+                <p class="click-to-expand" style="color: rgba(0, 0, 0, 0.4)">click to expand</p>                <div class="project-expanded-content">
+                    <div class="project-expanded-images">
+                        <img src="./assets/1_pj1.jpg" alt="Fitfolio Screenshot 1" class="project-screenshot">
+                        <img src="./assets/2_pj1.jpg" alt="Fitfolio Screenshot 2" class="project-screenshot">
+                        <img src="./assets/3_pj1.jpg" alt="Fitfolio Screenshot 3" class="project-screenshot">
+                        <img src="./assets/4_pj1.jpg" alt="Fitfolio Screenshot 4" class="project-screenshot">
+                    </div>
+                    <div class="project-expanded-info">
+                        <h3 class="project-expanded-title">Fitfolio</h3>
+                        <p class="project-expanded-description">Fitfolio is a digital closet app that helps users photograph, organize, and plan outfits using their real wardrobe. We wanted to tackle outfit repetition, unworn clothing, and the time it takes to plan outfits. Our solution digitizes users' wardrobe so they can mix and match items and use the Fashn API to visualize outfits on their avatar.</p>
+                        <div class="project-buttons">
+                            <button class="btn btn-color-2" onclick="window.open('https://github.com/miniSchemer/Fitfolio', '_blank'); event.stopPropagation();">
+                                Github
+                            </button>
+                            <button class="btn btn-color-1" onclick="window.open('https://drive.google.com/file/d/19cpmtexdfeuko2PEgCY3kvtBe0hVe30z/view', '_blank'); event.stopPropagation();">
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item">
+                <img src="./assets/app_logo.png" alt="NoteApp Logo" class="project-logo">
+                <h2 class="project-title">NoteApp</h2>
+                <p class="project-short-description">A note-taking app to help user's prioritize and organize their tasks.</p>
+                <p class="click-to-expand" style="color: rgba(0, 0, 0, 0.4)">click to expand</p>
+                <div class="project-expanded-content">
+                    <div class="project-expanded-images">
+                        <img src="./assets/1_pj2.png" alt="NoteApp Screenshot 1" class="project-screenshot">
+                        <img src="./assets/2_pj2.png" alt="NoteApp Screenshot 2" class="project-screenshot">
+                        <img src="./assets/3_pj2.png" alt="NoteApp Screenshot 3" class="project-screenshot">
+                        <img src="./assets/4_pj2.png" alt="NoteApp Screenshot 4" class="project-screenshot">
+                    </div>
+                    <div class="project-expanded-info">
+                        <h3 class="project-expanded-title">NoteApp</h3>
+                        <p class="project-expanded-description">NoteApp is a note-taking and to-do list app. We added features such as user authentication, allowing users to create tasks, set priorities, sort by importance, and receive push notification reminders to help users stay organized.</p>
+                        <div class="project-buttons">
+                            <button class="btn btn-color-2" onclick="window.open('https://github.com/miniSchemer/NoteApp', '_blank'); event.stopPropagation();">
+                                Github
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item">
+                <img src="./assets/mirrortrack-logo.png" alt="Mirror Track Logo" class="project-logo">
+                <h2 class="project-title">Mirror Track</h2>
+                <p class="project-short-description">A 3D interactive floating track made with Three.js.</p>
+                <p class="click-to-expand" style="color: rgba(0, 0, 0, 0.4)">click to expand</p>
+                <div class="project-expanded-content">
+                    <div class="project-expanded-images">
+                        <video class="project-video" controls>
+                            <source src="./assets/pj3_rec.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="project-expanded-info">
+                        <h3 class="project-expanded-title">Mirror Track</h3>
+                        <p class="project-expanded-description">A 3D interactive scene built with Three.js featuring two cars traveling along a figure-8 track suspended in a skybox environment. The scene depicts reflective chrome spheres that mirror the surrounding skybox, creating the illusion of a floating track in space.</p>
+                        <div class="project-buttons">
+                            <button class="btn btn-color-2" onclick="window.open('https://github.com/miniSchemer/MirrorTrack', '_blank'); event.stopPropagation();">
+                                Github
+                            </button>
+                            <button class="btn btn-color-1" onclick="window.open('https://minischemer.github.io/MirrorTrack/for_students/09-07-01.html', '_blank'); event.stopPropagation();">
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="design">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Design & Creative Work</h1>
+        
+        <div class="design-intro">
+            <p>Beyond coding, I explore design through various creative mediums. From interactive experiences to visual art and photography, these projects showcase how I engage with design principles in different forms.</p>
+        </div>
+
+        <div class="design-container">
+            
+            <!-- Art Collage -->
+            <div class="art-collage">
+                
+                <!-- Neon Art 1 -->
+                <div class="art-item neon1">
+                    <img src="./assets/moon.jpg" alt="Neon Art 1" class="art-img">
+                    <div class="art-hover-description">
+                        <h4>Mercury, Argon, Glass, Wood, Cotton</h4>
+                        <p>Neon artwork exploring how neon interacts with other glasswork.</p>
+                    </div>
+                </div>
+
+                <!-- Neon Art 2 -->
+                <div class="art-item neon2">
+                    <img src="./assets/heart.jpg" alt="Neon Art 2" class="art-img">
+                    <div class="art-hover-description">
+                        <h4>Neon, Glass, Acrylic, Cotton, Oil paint</h4>
+                        <p>Neon artwork, based on alice in wonderland, exploring neon light's interaction with reflective surfaces.</p>
+                    </div>
+                </div>
+
+                <!-- Painting -->
+                <div class="art-item painting">
+                    <img src="./assets/fish.jpg" alt="Painting" class="art-img">
+                    <div class="art-hover-description">
+                        <h4>Acrylic paint, Vinyl record</h4>
+                        <p>Recycled unused vinyl records by making them decor. </p>
+                    </div>
+                </div>
+
+                <!-- Photography -->
+                <div class="art-item photography">
+                    <img src="./assets/photo.jpg" alt="Photography" class="art-img">
+                    <div class="art-hover-description">
+                        <h4>Photography</h4>
+                        <p>Captured a moment during my travels, showcasing composition, lighting, and visual storytelling techniques.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <!-- Game - After art cards -->
+            <p class="game-description">Try out my first desktop game! An interactive experience built from scratch.</p>
+            <br><br>
+            <div class="iframe-wrapper">
+                <iframe
+                    title="Portfolio Game"
+                    src="./assets/Portfolio game.html"
+                    class="game-iframe"
+                    scrolling="no"
+                    frameborder="0"
+                ></iframe>
+            </div>
+
+        </div>
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-left">
+                <h2 class="contact-subtitle">Let's Connect</h2>
+                <p class="contact-text">Feel free to reach out via email or LinkedIn, or schedule a meeting using the calendar.</p>
+                
+                <div class="contact-info-items">
+                    <div class="contact-info-container">
+                        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+                        <p><a href="mailto:guduri.veda@gmail.com" target="_blank">guduri.veda@gmail.com</a></p>
+                    </div>
+                    <div class="contact-info-container">
+                        <img src="./assets/linkedin.png" alt="Resume icon" class="icon contact-icon" />
+                        <p><a href="https://www.linkedin.com/in/veda-guduri/" target="_blank">LinkedIn</a></p>
+                    </div>
+                    <div class="contact-info-container">
+                        <img src="./assets/resume_icon.png" alt="Resume icon" class="icon contact-icon" />
+                        <p><a href="./assets/resume.pdf" target="_blank">View Resume</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Calendar Embed -->
+            <div class="contact-right">
+                <div class="calendar-container">
+                    <!-- Google Calendar Appointment Scheduling begin -->
+                        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0lL2rRVofrVyKBXooXLt5XgwcYCftsDQERp54iwbUxVzafvqQ7y01AqMTalW2PQrc1s9_l0AOI?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+                    <!-- end Google Calendar Appointment Scheduling -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('#typed-text', {
+            strings: [
+                'Frontend Developer',
+                'UI/UX Designer',
+                'Problem Solver',
+                'Creative Coder'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+    </script>
+</body>
+<footer>
+    <p class="copyright" style="text-align: center;">© 2026 Veda Guduri. All rights reserved.</p>
+    <br>
+</footer>
+</body>
+</html>
