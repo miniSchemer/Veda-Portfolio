@@ -62,6 +62,7 @@
             <div id="socials-container">
                 <img src="./assets/linkedin.png" alt="My linkedin profile" class="icon" onclick="window.open('https://www.linkedin.com/in/veda-guduri/', '_blank')">
                 <img src="./assets/github.png" alt="My github" class="icon" onclick="window.open('https://github.com/miniSchemer?tab=repositories', '_blank')">
+                 <!-- <img src="./assets/email.png" alt="Email" class="icon" onclick="window.open('mailto:guduri.veda@gmail.com', '_blank')"> -->
             </div>
         </div>
     </section>
@@ -182,7 +183,8 @@
                 <img src="./assets/app_logo.png" alt="Fitfolio Logo" class="project-logo">
                 <h2 class="project-title">Fitfolio</h2>
                 <p class="project-short-description">A digital closet app for organizing and planning outfits.</p>
-                <p class="click-to-expand" style="color: rgba(0, 0, 0, 0.4)">click to expand</p>                <div class="project-expanded-content">
+                <p class="click-to-expand" style="color: rgba(0, 0, 0, 0.4)">click to expand</p>                
+                <div class="project-expanded-content">
                     <div class="project-expanded-images">
                         <img src="./assets/1_pj1.jpg" alt="Fitfolio Screenshot 1" class="project-screenshot">
                         <img src="./assets/2_pj1.jpg" alt="Fitfolio Screenshot 2" class="project-screenshot">
@@ -268,48 +270,80 @@
 
         <div class="design-container">
             
-            <!-- Art Collage -->
-            <div class="art-collage">
+            <!-- Design Cards Container -->
+            <div class="design-cards-container">
                 
-                <!-- Neon Art 1 -->
-                <div class="art-item neon1">
-                    <img src="./assets/moon.jpg" alt="Neon Art 1" class="art-img">
-                    <div class="art-hover-description">
-                        <h4>Mercury, Argon, Glass, Wood, Cotton</h4>
-                        <p>Neon artwork exploring how neon interacts with other glasswork.</p>
+                <!-- Card 1: Neon Art (with carousel) -->
+                <div class="design-card neon-card">
+                    <img src="./assets/moon.jpg" alt="Neon Art" class="design-card-logo">
+                    <h2 class="design-card-title">Neon Glasswork</h2>
+                    <p class="click-to-expand" style="color: rgba(0, 0, 0, 0.4)">click to expand</p>
+                    
+                    <div class="design-card-expanded-content">
+                        <div class="design-card-expanded-images">
+                            <!-- Neon 1 -->
+                            <div class="neon-slide active" data-bg="#1e3a8a">
+                                <img src="./assets/moon.jpg" alt="Neon Art 1" class="design-screenshot">
+                                <div class="neon-info">
+                                    <h4 style="color: #60a5fa;">Mercury, Argon, Glass, Wood, Cotton</h4>
+                                    <p style="color: #93c5fd;">Neon glasswork exploring how neon interacts with other glasswork.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Neon 2 -->
+                            <div class="neon-slide" data-bg="#ef4444">
+                                <img src="./assets/heart.jpg" alt="Neon Art 2" class="design-screenshot">
+                                <div class="neon-info">
+                                    <h4 style="color: #ffffff;">Neon, Glass, Acrylic, Cotton, Oil paint</h4>
+                                    <p style="color: #ffffff;">Neon glasswork, based on alice in wonderland, exploring neon light's interaction with reflective surfaces.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Carousel Controls -->
+                            <button class="neon-arrow neon-prev" onclick="changeNeonSlide(-1, event)">‹</button>
+                            <button class="neon-arrow neon-next" onclick="changeNeonSlide(1, event)">›</button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Neon Art 2 -->
-                <div class="art-item neon2">
-                    <img src="./assets/heart.jpg" alt="Neon Art 2" class="art-img">
-                    <div class="art-hover-description">
-                        <h4>Neon, Glass, Acrylic, Cotton, Oil paint</h4>
-                        <p>Neon artwork, based on alice in wonderland, exploring neon light's interaction with reflective surfaces.</p>
+                <!-- Card 2: Painting -->
+                <div class="design-card painting-card">
+                    <img src="./assets/fish.jpg" alt="Vinyl Record Painting" class="design-card-logo">
+                    <h2 class="design-card-title">Vinyl Record Art</h2>
+                    <p class="click-to-expand" style="color: rgba(0, 0, 0, 0.4)">click to expand</p>
+                    
+                    <div class="design-card-expanded-content">
+                        <div class="design-card-expanded-images single-image" style="background: #fbcfe8;">
+                            <img src="./assets/fish.jpg" alt="Vinyl Painting" class="design-screenshot">
+                            <div class="design-info">
+                                <h4 style="color: #9333ea;">Acrylic paint, Vinyl record</h4>
+                                <p style="color: #a855f7;">Recycled unused vinyl records by making them decor.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Painting -->
-                <div class="art-item painting">
-                    <img src="./assets/fish.jpg" alt="Painting" class="art-img">
-                    <div class="art-hover-description">
-                        <h4>Acrylic paint, Vinyl record</h4>
-                        <p>Recycled unused vinyl records by making them decor. </p>
+                <!-- Card 3: Photography -->
+                <div class="design-card photography-card">
+                    <img src="./assets/photo.jpg" alt="Photography" class="design-card-logo">
+                    <h2 class="design-card-title">Photography</h2>
+                    <p class="click-to-expand" style="color: rgba(0, 0, 0, 0.4)">click to expand</p>
+                    
+                    <div class="design-card-expanded-content">
+                        <div class="design-card-expanded-images single-image" style="background: #000000;">
+                            <img src="./assets/photo.jpg" alt="Photography" class="design-screenshot">
+                            <div class="design-info">
+                                <h4 style="color: #ffffff;">Photography</h4>
+                                <p style="color: #ffffff;">Captured a moment during my travels, showcasing composition, lighting, and visual storytelling techniques.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Photography -->
-                <div class="art-item photography">
-                    <img src="./assets/photo.jpg" alt="Photography" class="art-img">
-                    <div class="art-hover-description">
-                        <h4>Photography</h4>
-                        <p>Captured a moment during my travels, showcasing composition, lighting, and visual storytelling techniques.</p>
-                    </div>
-                </div>
             </div>
-            <br>
-            <br>
-            <!-- Game - After art cards -->
+
+            <!-- Game Section -->
+            <br><br>
             <p class="game-description">Try out my first desktop game! An interactive experience built from scratch.</p>
             <br><br>
             <div class="iframe-wrapper">

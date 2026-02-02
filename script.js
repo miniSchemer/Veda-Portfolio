@@ -250,3 +250,56 @@ document.addEventListener('click', (e) => {
         }, 100);
     }
 });
+
+// Design card expansion functionality
+let currentNeonSlide = 0;
+const designOverlay = document.createElement('div');
+designOverlay.className = 'design-overlay';
+document.body.appendChild(designOverlay);
+
+document.querySelectorAll('.design-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+        if (!this.classList.contains('expanded')) {
+            this.classList.add('expanded');
+            designOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Reset neon carousel to first slide
+            if (this.classList.contains('neon-card')) {
+                currentNeonSlide = 0;
+                showNeonSlide(0);
+            }
+        }
+    });
+});
+
+designOverlay.addEventListener('click', function() {
+    document.querySelectorAll('.design-card.expanded').forEach(card => {
+        card.classList.remove('expanded');
+    });
+    this.classList.remove('active');
+    document.body.style.overflow = 'auto';
+});
+
+// Neon carousel functionality
+function changeNeonSlide(direction, event) {
+    event.stopPropagation();
+    const slides = document.querySelectorAll('.neon-slide');
+    currentNeonSlide = (currentNeonSlide + direction + slides.length) % slides.length;
+    showNeonSlide(currentNeonSlide);
+}
+
+function showNeonSlide(index) {
+    const slides = document.querySelectorAll('.neon-slide');
+    const expandedImages = document.querySelector('.neon-card.expanded .design-card-expanded-images');
+    
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+            if (expandedImages) {
+                expandedImages.style.background = slide.dataset.bg;
+            }
+        }
+    });
+}
